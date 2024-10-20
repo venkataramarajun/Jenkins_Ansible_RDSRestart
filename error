@@ -1,50 +1,32 @@
-2024-10-20 17:25:38.731  Started by user PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
-2024-10-20 17:25:38.731  Running as PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
-2024-10-20 17:25:38.731  Checking out git https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git into /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf to read Platform-SelfService.Jenkinsfile
-2024-10-20 17:25:38.754  The recommended git tool is: NONE
-2024-10-20 17:25:38.754  using credential ps590443_token
-2024-10-20 17:25:38.788   > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf/.git # timeout=10
-2024-10-20 17:25:38.810  Fetching changes from the remote Git repository
-2024-10-20 17:25:38.835   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
-2024-10-20 17:25:38.875  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
-2024-10-20 17:25:38.875   > git --version # timeout=10
-2024-10-20 17:25:38.885   > git --version # 'git version 2.39.2'
-2024-10-20 17:25:38.885  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
-2024-10-20 17:25:38.984   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
-2024-10-20 17:25:39.483   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-2024-10-20 17:25:39.512  Checking out Revision e6ec78e4105801d0741907ebe629a2a46f105770 (refs/remotes/origin/main)
-2024-10-20 17:25:39.512   > git config core.sparsecheckout # timeout=10
-2024-10-20 17:25:39.525   > git checkout -f e6ec78e4105801d0741907ebe629a2a46f105770 # timeout=10
-2024-10-20 17:25:39.657  Commit message: "Update Platform-SelfService.Jenkinsfile"
-2024-10-20 17:25:39.660   > git rev-list --no-walk f742ceee4c2517d14235ac71c305ead7a9cf4e8e # timeout=10
-2024-10-20 17:25:39.821  org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-2024-10-20 17:25:39.821  WorkflowScript: 76: expecting '}', found ':' @ line 76, column 46.
-2024-10-20 17:25:39.821                  jobDsl scriptText: """
-2024-10-20 17:25:39.821                                   ^
-2024-10-20 17:25:39.821  
-2024-10-20 17:25:39.821  1 error
-2024-10-20 17:25:39.821  
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:225)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:191)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:189)
-2024-10-20 17:25:39.821  	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)
-2024-10-20 17:25:39.822  	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:626)
-2024-10-20 17:25:39.822  	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
-2024-10-20 17:25:39.822  	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
-2024-10-20 17:25:39.822  	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
-2024-10-20 17:25:39.822  	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
-2024-10-20 17:25:39.822  	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
-2024-10-20 17:25:39.822  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
-2024-10-20 17:25:39.822  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
-2024-10-20 17:25:39.822  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:635)
-2024-10-20 17:25:39.822  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:581)
-2024-10-20 17:25:39.822  	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:335)
-2024-10-20 17:25:39.822  	at hudson.model.ResourceController.execute(ResourceController.java:101)
-2024-10-20 17:25:39.822  	at hudson.model.Executor.run(Executor.java:442)
-2024-10-20 17:25:39.900  Finished: FAILURE
+jobDsl scriptText: '''
+    pipelineJob("${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule") {
+        description('Job to restart RDS DB: ${db_name}')
+        triggers {
+            scm('${schedule}')  // Poll SCM with schedule from YAML
+        }
+        definition {
+            cps {
+                script('''
+                    pipeline {
+                        agent any
+                        stages {
+                            stage('Restart RDS DB') {
+                                steps {
+                                    echo "Restarting RDS DB: ${db_name} in region: ${region}"
+                                    
+                                    // Checkout the Ansible playbook repository
+                                    checkout([$class: 'GitSCM', branches: [[name: '*/main']],
+                                        userRemoteConfigs: [[url: '${PLAYBOOK_REPO_URL}']],
+                                        credentialsId: 'git_credentials'])
+
+                                    // Trigger Ansible playbook
+                                    sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
+                                }
+                            }
+                        }
+                    }
+                ''')
+            }
+        }
+    }
+'''
