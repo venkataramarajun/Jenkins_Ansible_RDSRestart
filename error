@@ -6,7 +6,7 @@ pipeline {
         JOB_FOLDER = 'AWS-RDS-Restart'  // Folder to be created inside GHSSelfServicePlatform
         JOB_TRACKING_FILE = 'created_jobs.log'
         YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'
-        JENKINS_TOKEN = credentials("ps590443_token")
+        JENKINS_TOKEN = credentials("pavani_jenkins_api_token")
     }
 
     stages {
@@ -126,3 +126,5 @@ pipeline {
         }
     }
 }
+
+
