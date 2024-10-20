@@ -1,3 +1,106 @@
+Errors:
+
+2024-10-20 17:36:34.276  Started by user PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 17:36:34.276  Running as PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 17:36:34.277  Checking out git https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git into /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf to read Platform-SelfService.Jenkinsfile
+2024-10-20 17:36:34.301  The recommended git tool is: NONE
+2024-10-20 17:36:34.301  using credential ps590443_token
+2024-10-20 17:36:34.332   > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf/.git # timeout=10
+2024-10-20 17:36:34.347  Fetching changes from the remote Git repository
+2024-10-20 17:36:34.372   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
+2024-10-20 17:36:34.411  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 17:36:34.411   > git --version # timeout=10
+2024-10-20 17:36:34.419   > git --version # 'git version 2.39.2'
+2024-10-20 17:36:34.419  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
+2024-10-20 17:36:34.501   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+2024-10-20 17:36:35.019   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+2024-10-20 17:36:35.045  Checking out Revision 164adbb1d1ab4ef876c4dbc8db73d5ef6a40fd69 (refs/remotes/origin/main)
+2024-10-20 17:36:35.045   > git config core.sparsecheckout # timeout=10
+2024-10-20 17:36:35.058   > git checkout -f 164adbb1d1ab4ef876c4dbc8db73d5ef6a40fd69 # timeout=10
+2024-10-20 17:36:35.199  Commit message: "Update Platform-SelfService.Jenkinsfile"
+2024-10-20 17:36:35.202   > git rev-list --no-walk f935437d1bcdfcf3e9dace54551d5f13a2c3a849 # timeout=10
+2024-10-20 17:36:35.660  java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "name" is null
+2024-10-20 17:36:35.660  	at org.jenkinsci.plugins.jx.pipelines.dsl.PipelineDSLGlobal.getGlobalForName(PipelineDSLGlobal.java:114)
+2024-10-20 17:36:35.660  	at org.jenkinsci.plugins.jx.pipelines.dsl.JXPipelinesValidator.validateElement(JXPipelinesValidator.java:17)
+2024-10-20 17:36:35.660  	at org.jenkinsci.plugins.pipeline.modeldefinition.validator.DeclarativeValidatorContributor.validateElementAll(DeclarativeValidatorContributor.java:201)
+2024-10-20 17:36:35.660  	at org.jenkinsci.plugins.pipeline.modeldefinition.validator.DeclarativeValidatorContributor$validateElementAll$106.call(Unknown Source)
+2024-10-20 17:36:35.660  	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+2024-10-20 17:36:35.660  	at org.jenkinsci.plugins.pipeline.modeldefinition.validator.DeclarativeValidatorContributor$validateElementAll$107.call(Unknown Source)
+2024-10-20 17:36:35.661  	at org.jenkinsci.plugins.pipeline.modeldefinition.validator.ModelValidatorImpl$_validateFromContributors_closure52.doCall(ModelValidatorImpl.groovy:928)
+2024-10-20 17:36:35.661  	at jdk.internal.reflect.GeneratedMethodAccessor29201.invoke(Unknown Source)
+2024-10-20 17:36:35.661  	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2024-10-20 17:36:35.661  	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
+2024-10-20 17:36:35.661  	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:264)
+2024-10-20 17:36:35.661  	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
+2024-10-20 17:36:35.661  	at groovy.lang.Closure.call(Closure.java:420)
+2024-10-20 17:36:35.661  	at groovy.lang.Closure.call(Closure.java:436)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3287)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3257)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.dgm$67.invoke(Unknown Source)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:274)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:128)
+2024-10-20 17:36:35.661  	at org.jenkinsci.plugins.pipeline.modeldefinition.validator.ModelValidatorImpl.validateFromContributors(ModelValidatorImpl.groovy:925)
+2024-10-20 17:36:35.661  	at org.jenkinsci.plugins.pipeline.modeldefinition.validator.ModelValidatorImpl.validateFromContributors(ModelValidatorImpl.groovy)
+2024-10-20 17:36:35.661  	at jdk.internal.reflect.GeneratedMethodAccessor27001.invoke(Unknown Source)
+2024-10-20 17:36:35.661  	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2024-10-20 17:36:35.661  	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+2024-10-20 17:36:35.661  	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:177)
+2024-10-20 17:36:35.661  	at org.jenkinsci.plugins.pipeline.modeldefinition.validator.ModelValidatorImpl.validateElement(ModelValidatorImpl.groovy:421)
+2024-10-20 17:36:35.661  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep.validate(ModelASTStep.java:67)
+2024-10-20 17:36:35.661  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTElement.validate(ModelASTElement.java:266)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch.validate(ModelASTBranch.java:37)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTElement.validate(ModelASTElement.java:266)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage.validate(ModelASTStage.java:70)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStages.validate(ModelASTStages.java:39)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStages.validate(ModelASTStages.java:33)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTElement.validate(ModelASTElement.java:266)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTElement.validate(ModelASTElement.java:257)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef.validate(ModelASTPipelineDef.java:50)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTMarkerInterface$validate$0.call(Unknown Source)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.parser.ModelParser.parsePipelineStep(ModelParser.groovy:307)
+2024-10-20 17:36:35.662  	at jdk.internal.reflect.GeneratedMethodAccessor27385.invoke(Unknown Source)
+2024-10-20 17:36:35.662  	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2024-10-20 17:36:35.662  	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2024-10-20 17:36:35.662  	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+2024-10-20 17:36:35.662  	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+2024-10-20 17:36:35.662  	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+2024-10-20 17:36:35.662  	at org.jenkinsci.plugins.pipeline.modeldefinition.parser.ModelParser.parse(ModelParser.groovy:180)
+2024-10-20 17:36:35.662  	at jdk.internal.reflect.GeneratedMethodAccessor27187.invoke(Unknown Source)
+2024-10-20 17:36:35.662  	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2024-10-20 17:36:35.662  	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2024-10-20 17:36:35.662  	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
+2024-10-20 17:36:35.662  	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+2024-10-20 17:36:35.662  	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1225)
+2024-10-20 17:36:35.662  	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
+2024-10-20 17:36:35.662  	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:68)
+2024-10-20 17:36:35.663  	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:177)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.pipeline.modeldefinition.parser.ModelParser.parse(ModelParser.groovy:148)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.pipeline.modeldefinition.parser.ModelParser.parse(ModelParser.groovy)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.pipeline.modeldefinition.parser.GroovyShellDecoratorImpl$1.call(GroovyShellDecoratorImpl.java:78)
+2024-10-20 17:36:35.663  	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1087)
+2024-10-20 17:36:35.663  Caused: BUG! exception in phase 'semantic analysis' in source unit 'WorkflowScript' unexpected NullpointerException
+2024-10-20 17:36:35.663  	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1092)
+2024-10-20 17:36:35.663  	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:624)
+2024-10-20 17:36:35.663  	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
+2024-10-20 17:36:35.663  	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
+2024-10-20 17:36:35.663  	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
+2024-10-20 17:36:35.663  	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:635)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:581)
+2024-10-20 17:36:35.663  	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:335)
+2024-10-20 17:36:35.663  	at hudson.model.ResourceController.execute(ResourceController.java:101)
+2024-10-20 17:36:35.663  	at hudson.model.Executor.run(Executor.java:442)
+2024-10-20 17:36:35.742  Finished: FAILURE
+
+My code:
 pipeline {
     agent { label 'docker-build-aws' }
 
@@ -71,41 +174,41 @@ pipeline {
                             echo "Skipping ${yamlFile} due to missing required fields (db_name, region, schedule)."
                         } else {
                             echo "Creating job for DB: ${db_name}, Region: ${region}, Schedule: ${schedule}"
-
+                            }
                             // Create or update the Jenkins job using Job DSL with Poll SCM schedule
-                            jobDsl scriptText: """
-                            pipelineJob("${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule") {
-                                description('Job to restart RDS DB: ${db_name}')
-                                triggers {
-                                    scm('${schedule}')  // Poll SCM with schedule from YAML
-                                }
-                                definition {
-                                    cps {
-                                        script('''
-                                            pipeline {
-                                                agent any
-                                                stages {
-                                                    stage('Restart RDS DB') {
-                                                        steps {
-                                                            echo "Restarting RDS DB: ${db_name} in region: ${region}"
-                                                            
-                                                            // Checkout the Ansible playbook repository
-                                                            checkout([$class: 'GitSCM', branches: [[name: '*/main']],
-                                                                userRemoteConfigs: [[url: '${PLAYBOOK_REPO_URL}']],
-                                                                credentialsId: 'git_credentials'])
+                            jobDsl scriptText: '''
+    pipelineJob("${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule") {
+        description('Job to restart RDS DB: ${db_name}')
+        triggers {
+            scm('${schedule}')  // Poll SCM with schedule from YAML
+        }
+        definition {
+            cps {
+                script('''
+                    pipeline {
+                        agent any
+                        stages {
+                            stage('Restart RDS DB') {
+                                steps {
+                                    echo "Restarting RDS DB: ${db_name} in region: ${region}"
+                                    
+                                    // Checkout the Ansible playbook repository
+                                    checkout([$class: 'GitSCM', branches: [[name: '*/main']],
+                                        userRemoteConfigs: [[url: '${PLAYBOOK_REPO_URL}']],
+                                        credentialsId: 'git_credentials'])
 
-                                                            // Trigger Ansible playbook
-                                                            sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ''')
-                                    }
+                                    // Trigger Ansible playbook
+                                    sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
                                 }
                             }
-                            """
-                            jobNamesCreated << "${db_name}-restart-schedule"  // Track created jobs
+                        }
+                    }
+                ''')
+            }
+        }
+    }
+'''
+                jobNamesCreated << "${db_name}-restart-schedule"  // Track created jobs
                         }
                     }
 
@@ -142,4 +245,3 @@ pipeline {
             }
         }
     }
-}
