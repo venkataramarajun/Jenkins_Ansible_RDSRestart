@@ -1,29 +1,23 @@
 pipeline {
-    agent { label 'docker-build-aws' }  // Specify the Jenkins agent label
+    agent { label 'docker-build-aws' }
 
     environment {
-        REPO_URL = 'https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git'  // GitHub repository URL
-        JOB_FOLDER = 'GHSSelfServicePlatform'  // Folder in Jenkins where the jobs should be created
-        JOB_TRACKING_FILE = 'created_jobs.log'  // File to track created jobs
-        YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'  // Path where the YAML files are placed
-        JENKINS_TOKEN = credentials("ps590443_token")  // Use Jenkins API token for authentication
+        // Define only the environment variables that are relevant for job processing
+        JOB_FOLDER = 'GHSSelfServicePlatform'
+        JOB_TRACKING_FILE = 'created_jobs.log'
+        YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'
+        JENKINS_TOKEN = credentials("ps590443_token")
     }
 
     stages {
-        stage('Checkout YAML Files from GitHub') {
+        // No need to checkout the repo here, Jenkins SCM configuration will handle it
+        stage('List YAML Files from SCM') {
             steps {
-                echo 'Checking out the repository from GitHub...'
-                git url: "${REPO_URL}", branch: 'main'  // Clone the repository
-            }
-        }
-
-        stage('List YAML Files') {
-            steps {
-                echo "Listing YAML files from ${YAML_INPUT_PATH} after checkout..."
+                echo 'Listing YAML files from the checked-out repository...'
                 script {
-                    def yamlFiles = findFiles(glob: "${YAML_INPUT_PATH}/*.yml")  // Find all YAML files in the specific path
+                    def yamlFiles = findFiles(glob: '**/*.yml')  // Find all YAML files in the workspace
                     if (yamlFiles.length == 0) {
-                        error("No YAML files found in ${YAML_INPUT_PATH} to process.")
+                        error("No YAML files found to process.")
                     } else {
                         echo "YAML files found: ${yamlFiles.collect { it.path }}"  // Collect file paths from FileWrapper objects
                         env.YAML_FILES = yamlFiles.collect { it.path }.join(',')
