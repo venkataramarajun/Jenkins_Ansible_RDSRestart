@@ -1,50 +1,271 @@
-2024-10-20 14:06:44.119  Started by user PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
-2024-10-20 14:06:44.120  Running as PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
-2024-10-20 14:06:44.124  Checking out git https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git into /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf to read Platform-SelfService.Jenkinsfile
-2024-10-20 14:06:44.146  The recommended git tool is: NONE
-2024-10-20 14:06:44.146  using credential ps590443_token
-2024-10-20 14:06:44.177   > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf/.git # timeout=10
-2024-10-20 14:06:44.202  Fetching changes from the remote Git repository
-2024-10-20 14:06:44.235   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
-2024-10-20 14:06:44.275  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
-2024-10-20 14:06:44.275   > git --version # timeout=10
-2024-10-20 14:06:44.283   > git --version # 'git version 2.39.2'
-2024-10-20 14:06:44.283  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
-2024-10-20 14:06:44.364   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
-2024-10-20 14:06:44.866   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-2024-10-20 14:06:44.892  Checking out Revision 571bfd38735f3f61b432eded5858549e3b90bbc6 (refs/remotes/origin/main)
-2024-10-20 14:06:44.892   > git config core.sparsecheckout # timeout=10
-2024-10-20 14:06:44.905   > git checkout -f 571bfd38735f3f61b432eded5858549e3b90bbc6 # timeout=10
-2024-10-20 14:06:45.044  Commit message: "Update Platform-SelfService.Jenkinsfile"
-2024-10-20 14:06:45.048   > git rev-list --no-walk faebed199d9f557855f58ac4bbc2b602e1f18c06 # timeout=10
-2024-10-20 14:06:45.877  org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-2024-10-20 14:06:45.877  WorkflowScript: 2: Only one agent type is allowed per agent section @ line 2, column 9.
-2024-10-20 14:06:45.877             agent {
-2024-10-20 14:06:45.877             ^
-2024-10-20 14:06:45.877  
-2024-10-20 14:06:45.877  WorkflowScript: 1: Missing required section "stages" @ line 1, column 5.
-2024-10-20 14:06:45.877         pipeline {
-2024-10-20 14:06:45.877         ^
-2024-10-20 14:06:45.877  
-2024-10-20 14:06:45.877  WorkflowScript: 2: No agent type specified. Must be one of [any, docker, dockerContainer, dockerfile, label, none] @ line 2, column 9.
-2024-10-20 14:06:45.877             agent {
-2024-10-20 14:06:45.877             ^
-2024-10-20 14:06:45.877  
-2024-10-20 14:06:45.877  3 errors
-2024-10-20 14:06:45.877  
-2024-10-20 14:06:45.877  	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-2024-10-20 14:06:45.877  	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1107)
-2024-10-20 14:06:45.877  	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:624)
-2024-10-20 14:06:45.878  	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
-2024-10-20 14:06:45.878  	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
-2024-10-20 14:06:45.878  	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
-2024-10-20 14:06:45.878  	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
-2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
-2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
-2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
-2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:635)
-2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:581)
-2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:335)
-2024-10-20 14:06:45.878  	at hudson.model.ResourceController.execute(ResourceController.java:101)
-2024-10-20 14:06:45.878  	at hudson.model.Executor.run(Executor.java:442)
-2024-10-20 14:06:45.957  Finished: FAILURE
+2024-10-20 14:19:43.577  Started by user PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 14:19:43.577  Running as PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 14:19:43.578  Checking out git https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git into /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf to read Platform-SelfService.Jenkinsfile
+2024-10-20 14:19:43.609  The recommended git tool is: NONE
+2024-10-20 14:19:43.610  using credential ps590443_token
+2024-10-20 14:19:43.640   > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf/.git # timeout=10
+2024-10-20 14:19:43.667  Fetching changes from the remote Git repository
+2024-10-20 14:19:43.696   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
+2024-10-20 14:19:43.736  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 14:19:43.736   > git --version # timeout=10
+2024-10-20 14:19:43.744   > git --version # 'git version 2.39.2'
+2024-10-20 14:19:43.744  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
+2024-10-20 14:19:43.821   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+2024-10-20 14:19:44.448   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+2024-10-20 14:19:44.473  Checking out Revision d68a52c5ab777dd83980430c33a151ffa3574987 (refs/remotes/origin/main)
+2024-10-20 14:19:44.473   > git config core.sparsecheckout # timeout=10
+2024-10-20 14:19:44.486   > git checkout -f d68a52c5ab777dd83980430c33a151ffa3574987 # timeout=10
+2024-10-20 14:19:44.650  Commit message: "Update Platform-SelfService.Jenkinsfile"
+2024-10-20 14:19:44.653   > git rev-list --no-walk 571bfd38735f3f61b432eded5858549e3b90bbc6 # timeout=10
+2024-10-20 14:19:44.911  [Pipeline] Start of Pipeline
+2024-10-20 14:19:45.284  [Pipeline] node
+2024-10-20 14:19:45.426  Running on ghs-jenkins-agent-01 in /home/CloudAdmin/Jenkins/workspace/GHSSelfServicePlatform/rds-restart-jenkins
+2024-10-20 14:19:45.455  [Pipeline] {
+2024-10-20 14:19:45.591  [Pipeline] stage
+2024-10-20 14:19:45.618  [Pipeline] { (Declarative: Checkout SCM)
+2024-10-20 14:19:45.753  [Pipeline] checkout
+2024-10-20 14:19:45.817  The recommended git tool is: NONE
+2024-10-20 14:19:45.822  using credential ps590443_token
+2024-10-20 14:19:45.855  Fetching changes from the remote Git repository
+2024-10-20 14:19:46.124  Checking out Revision d68a52c5ab777dd83980430c33a151ffa3574987 (refs/remotes/origin/main)
+2024-10-20 14:19:46.137  Commit message: "Update Platform-SelfService.Jenkinsfile"
+2024-10-20 14:19:46.208  [Pipeline] }
+2024-10-20 14:19:45.851   > git rev-parse --resolve-git-dir /home/CloudAdmin/Jenkins/workspace/GHSSelfServicePlatform/rds-restart-jenkins/.git # timeout=10
+2024-10-20 14:19:45.858   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
+2024-10-20 14:19:45.873  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 14:19:45.873   > git --version # timeout=10
+2024-10-20 14:19:45.875   > git --version # 'git version 2.43.5'
+2024-10-20 14:19:45.875  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
+2024-10-20 14:19:45.877   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+2024-10-20 14:19:46.122   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+2024-10-20 14:19:46.125   > git config core.sparsecheckout # timeout=10
+2024-10-20 14:19:46.127   > git checkout -f d68a52c5ab777dd83980430c33a151ffa3574987 # timeout=10
+2024-10-20 14:25:51.634  [Pipeline] // stage
+2024-10-20 14:25:51.743  [Pipeline] withEnv
+2024-10-20 14:25:51.770  [Pipeline] {
+2024-10-20 14:25:51.904  [Pipeline] withCredentials
+2024-10-20 14:25:51.965  Masking supported pattern matches of $JENKINS_TOKEN or $JENKINS_TOKEN_PSW
+2024-10-20 14:25:51.991  [Pipeline] {
+2024-10-20 14:25:52.100  [Pipeline] withEnv
+2024-10-20 14:25:52.126  [Pipeline] {
+2024-10-20 14:25:52.260  [Pipeline] stage
+2024-10-20 14:25:52.286  [Pipeline] { (Checkout YAML Files from GitHub)
+2024-10-20 14:25:52.401  [Pipeline] echo
+2024-10-20 14:25:52.452  Checking out the repository from GitHub...
+2024-10-20 14:25:52.534  [Pipeline] git
+2024-10-20 14:25:52.569  The recommended git tool is: NONE
+2024-10-20 14:25:52.574  No credentials specified
+2024-10-20 14:25:52.583  Fetching changes from the remote Git repository
+2024-10-20 14:25:52.755  ERROR: Error fetching remote repo 'origin'
+2024-10-20 14:25:52.755  hudson.plugins.git.GitException: Failed to fetch from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 14:25:52.755  	at hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:999)
+2024-10-20 14:25:52.755  	at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1241)
+2024-10-20 14:25:52.755  	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1305)
+2024-10-20 14:25:52.755  	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:136)
+2024-10-20 14:25:52.756  	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:101)
+2024-10-20 14:25:52.756  	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:88)
+2024-10-20 14:25:52.756  	at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+2024-10-20 14:25:52.756  	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+2024-10-20 14:25:52.756  	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+2024-10-20 14:25:52.756  	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+2024-10-20 14:25:52.756  	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+2024-10-20 14:25:52.756  	at java.base/java.lang.Thread.run(Unknown Source)
+2024-10-20 14:25:52.756  Caused by: hudson.plugins.git.GitException: Command "git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/*" returned status code 128:
+2024-10-20 14:25:52.756  stdout: 
+2024-10-20 14:25:52.756  stderr: 14:25:52.596971 http.c:843              == Info: Couldn't find host git.cglcloud.com in the (nil) file; using defaults
+2024-10-20 14:25:52.756  14:25:52.689655 http.c:843              == Info:   Trying 3.226.178.89:443...
+2024-10-20 14:25:52.756  14:25:52.694799 http.c:843              == Info: Connected to git.cglcloud.com (3.226.178.89) port 443 (#0)
+2024-10-20 14:25:52.756  14:25:52.696054 http.c:843              == Info: ALPN, offering h2
+2024-10-20 14:25:52.756  14:25:52.696059 http.c:843              == Info: ALPN, offering http/1.1
+2024-10-20 14:25:52.756  14:25:52.712135 http.c:843              == Info:  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2024-10-20 14:25:52.756  14:25:52.712281 http.c:843              == Info: TLSv1.0 (OUT), TLS header, Certificate Status (22):
+2024-10-20 14:25:52.756  14:25:52.712286 http.c:843              == Info: TLSv1.3 (OUT), TLS handshake, Client hello (1):
+2024-10-20 14:25:52.757  14:25:52.717013 http.c:843              == Info: TLSv1.2 (IN), TLS header, Certificate Status (22):
+2024-10-20 14:25:52.757  14:25:52.717027 http.c:843              == Info: TLSv1.3 (IN), TLS handshake, Server hello (2):
+2024-10-20 14:25:52.757  14:25:52.717186 http.c:843              == Info: TLSv1.2 (IN), TLS header, Finished (20):
+2024-10-20 14:25:52.757  14:25:52.717190 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.757  14:25:52.717200 http.c:843              == Info: TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+2024-10-20 14:25:52.757  14:25:52.717206 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.757  14:25:52.717215 http.c:843              == Info: TLSv1.3 (IN), TLS handshake, Certificate (11):
+2024-10-20 14:25:52.757  14:25:52.717713 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.757  14:25:52.717721 http.c:843              == Info: TLSv1.3 (IN), TLS handshake, CERT verify (15):
+2024-10-20 14:25:52.757  14:25:52.717779 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.757  14:25:52.717791 http.c:843              == Info: TLSv1.3 (IN), TLS handshake, Finished (20):
+2024-10-20 14:25:52.757  14:25:52.717813 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Finished (20):
+2024-10-20 14:25:52.757  14:25:52.717817 http.c:843              == Info: TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+2024-10-20 14:25:52.757  14:25:52.717835 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Unknown (23):
+2024-10-20 14:25:52.757  14:25:52.717837 http.c:843              == Info: TLSv1.3 (OUT), TLS handshake, Finished (20):
+2024-10-20 14:25:52.757  14:25:52.717865 http.c:843              == Info: SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256
+2024-10-20 14:25:52.757  14:25:52.717868 http.c:843              == Info: ALPN, server accepted to use h2
+2024-10-20 14:25:52.757  14:25:52.717872 http.c:843              == Info: Server certificate:
+2024-10-20 14:25:52.757  14:25:52.717879 http.c:843              == Info:  subject: CN=git.cglcloud.com
+2024-10-20 14:25:52.757  14:25:52.717884 http.c:843              == Info:  start date: Oct  1 00:44:46 2024 GMT
+2024-10-20 14:25:52.758  14:25:52.717888 http.c:843              == Info:  expire date: Dec 30 00:44:45 2024 GMT
+2024-10-20 14:25:52.758  14:25:52.717899 http.c:843              == Info:  subjectAltName: host "git.cglcloud.com" matched cert's "git.cglcloud.com"
+2024-10-20 14:25:52.758  14:25:52.717905 http.c:843              == Info:  issuer: C=US; O=Let's Encrypt; CN=R11
+2024-10-20 14:25:52.758  14:25:52.717908 http.c:843              == Info:  SSL certificate verify ok.
+2024-10-20 14:25:52.758  14:25:52.717925 http.c:843              == Info: Using HTTP2, server supports multi-use
+2024-10-20 14:25:52.758  14:25:52.717927 http.c:843              == Info: Connection state changed (HTTP/2 confirmed)
+2024-10-20 14:25:52.758  14:25:52.717932 http.c:843              == Info: Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+2024-10-20 14:25:52.758  14:25:52.717942 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Unknown (23):
+2024-10-20 14:25:52.758  14:25:52.717950 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Unknown (23):
+2024-10-20 14:25:52.758  14:25:52.717956 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Unknown (23):
+2024-10-20 14:25:52.758  14:25:52.717976 http.c:843              == Info: Using Stream ID: 1 (easy handle 0x55a98edcc9f0)
+2024-10-20 14:25:52.758  14:25:52.717989 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Unknown (23):
+2024-10-20 14:25:52.758  14:25:52.717996 http.c:790              => Send header, 0000000264 bytes (0x00000108)
+2024-10-20 14:25:52.758  14:25:52.718000 http.c:802              => Send header: GET /IHSCloudPlatform/Platform-SelfService.git/info/refs?service=git-upload-pack HTTP/2
+2024-10-20 14:25:52.758  14:25:52.718001 http.c:802              => Send header: Host: git.cglcloud.com
+2024-10-20 14:25:52.758  14:25:52.718002 http.c:802              => Send header: user-agent: git/2.43.5
+2024-10-20 14:25:52.758  14:25:52.718004 http.c:802              => Send header: accept: */*
+2024-10-20 14:25:52.758  14:25:52.718006 http.c:802              => Send header: accept-encoding: deflate, gzip, br
+2024-10-20 14:25:52.758  14:25:52.718007 http.c:802              => Send header: accept-language: en-US, *;q=0.9
+2024-10-20 14:25:52.759  14:25:52.718009 http.c:802              => Send header: pragma: no-cache
+2024-10-20 14:25:52.759  14:25:52.718010 http.c:802              => Send header: git-protocol: version=2
+2024-10-20 14:25:52.759  14:25:52.718011 http.c:802              => Send header:
+2024-10-20 14:25:52.759  14:25:52.721243 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.759  14:25:52.721264 http.c:843              == Info: TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+2024-10-20 14:25:52.759  14:25:52.721279 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.759  14:25:52.721284 http.c:843              == Info: TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+2024-10-20 14:25:52.759  14:25:52.721292 http.c:843              == Info: old SSL session ID is stale, removing
+2024-10-20 14:25:52.759  14:25:52.721299 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.759  14:25:52.721312 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Unknown (23):
+2024-10-20 14:25:52.759  14:25:52.731519 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.759  14:25:52.731564 http.c:790              <= Recv header, 0000000013 bytes (0x0000000d)
+2024-10-20 14:25:52.759  14:25:52.731567 http.c:802              <= Recv header: HTTP/2 401
+2024-10-20 14:25:52.759  14:25:52.731570 http.c:790              <= Recv header, 0000000026 bytes (0x0000001a)
+2024-10-20 14:25:52.759  14:25:52.731571 http.c:802              <= Recv header: server: GitHub-Babel/3.0
+2024-10-20 14:25:52.759  14:25:52.731573 http.c:790              <= Recv header, 0000000054 bytes (0x00000036)
+2024-10-20 14:25:52.759  14:25:52.731575 http.c:802              <= Recv header: content-security-policy: default-src 'none'; sandbox
+2024-10-20 14:25:52.759  14:25:52.731577 http.c:790              <= Recv header, 0000000041 bytes (0x00000029)
+2024-10-20 14:25:52.759  14:25:52.731579 http.c:802              <= Recv header: content-type: text/plain; charset=UTF-8
+2024-10-20 14:25:52.759  14:25:52.731582 http.c:790              <= Recv header, 0000000040 bytes (0x00000028)
+2024-10-20 14:25:52.759  14:25:52.731583 http.c:802              <= Recv header: www-authenticate: Basic realm="GitHub"
+2024-10-20 14:25:52.760  14:25:52.731586 http.c:790              <= Recv header, 0000000020 bytes (0x00000014)
+2024-10-20 14:25:52.760  14:25:52.731587 http.c:802              <= Recv header: content-length: 23
+2024-10-20 14:25:52.760  14:25:52.731589 http.c:790              <= Recv header, 0000000037 bytes (0x00000025)
+2024-10-20 14:25:52.760  14:25:52.731590 http.c:802              <= Recv header: date: Sun, 20 Oct 2024 19:25:52 GMT
+2024-10-20 14:25:52.760  14:25:52.731592 http.c:790              <= Recv header, 0000000023 bytes (0x00000017)
+2024-10-20 14:25:52.760  14:25:52.731594 http.c:802              <= Recv header: x-frame-options: DENY
+2024-10-20 14:25:52.760  14:25:52.731597 http.c:790              <= Recv header, 0000000002 bytes (0x00000002)
+2024-10-20 14:25:52.760  14:25:52.731598 http.c:802              <= Recv header:
+2024-10-20 14:25:52.760  14:25:52.731612 http.c:843              == Info: Connection #0 to host git.cglcloud.com left intact
+2024-10-20 14:25:52.760  14:25:52.733438 http.c:843              == Info: Found bundle for host git.cglcloud.com: 0x55a98edbc120 [can multiplex]
+2024-10-20 14:25:52.760  14:25:52.733454 http.c:843              == Info: Re-using existing connection! (#0) with host git.cglcloud.com
+2024-10-20 14:25:52.760  14:25:52.733459 http.c:843              == Info: Connected to git.cglcloud.com (3.226.178.89) port 443 (#0)
+2024-10-20 14:25:52.760  14:25:52.733474 http.c:843              == Info: Server auth using Basic with user 'Username for 'https://git.cglcloud.com': '
+2024-10-20 14:25:52.760  14:25:52.733488 http.c:843              == Info: Using Stream ID: 3 (easy handle 0x55a98edcc9f0)
+2024-10-20 14:25:52.760  14:25:52.733513 http.c:843              == Info: TLSv1.2 (OUT), TLS header, Unknown (23):
+2024-10-20 14:25:52.760  14:25:52.733529 http.c:790              => Send header, 0000000455 bytes (0x000001c7)
+2024-10-20 14:25:52.760  14:25:52.733533 http.c:802              => Send header: GET /IHSCloudPlatform/Platform-SelfService.git/info/refs?service=git-upload-pack HTTP/2
+2024-10-20 14:25:52.760  14:25:52.733535 http.c:802              => Send header: Host: git.cglcloud.com
+2024-10-20 14:25:52.760  14:25:52.733536 http.c:802              => Send header: authorization: Basic <redacted>
+2024-10-20 14:25:52.761  14:25:52.733537 http.c:802              => Send header: user-agent: git/2.43.5
+2024-10-20 14:25:52.761  14:25:52.733539 http.c:802              => Send header: accept: */*
+2024-10-20 14:25:52.761  14:25:52.733541 http.c:802              => Send header: accept-encoding: deflate, gzip, br
+2024-10-20 14:25:52.761  14:25:52.733542 http.c:802              => Send header: accept-language: en-US, *;q=0.9
+2024-10-20 14:25:52.761  14:25:52.733544 http.c:802              => Send header: pragma: no-cache
+2024-10-20 14:25:52.761  14:25:52.733546 http.c:802              => Send header: git-protocol: version=2
+2024-10-20 14:25:52.761  14:25:52.733547 http.c:802              => Send header:
+2024-10-20 14:25:52.761  14:25:52.749266 http.c:843              == Info: TLSv1.2 (IN), TLS header, Unknown (23):
+2024-10-20 14:25:52.761  14:25:52.749311 http.c:790              <= Recv header, 0000000013 bytes (0x0000000d)
+2024-10-20 14:25:52.761  14:25:52.749314 http.c:802              <= Recv header: HTTP/2 403
+2024-10-20 14:25:52.761  14:25:52.749317 http.c:790              <= Recv header, 0000000026 bytes (0x0000001a)
+2024-10-20 14:25:52.761  14:25:52.749318 http.c:802              <= Recv header: server: GitHub-Babel/3.0
+2024-10-20 14:25:52.761  14:25:52.749320 http.c:790              <= Recv header, 0000000054 bytes (0x00000036)
+2024-10-20 14:25:52.761  14:25:52.749321 http.c:802              <= Recv header: content-security-policy: default-src 'none'; sandbox
+2024-10-20 14:25:52.761  14:25:52.749323 http.c:790              <= Recv header, 0000000041 bytes (0x00000029)
+2024-10-20 14:25:52.761  14:25:52.749326 http.c:802              <= Recv header: content-type: text/plain; charset=UTF-8
+2024-10-20 14:25:52.761  14:25:52.749328 http.c:790              <= Recv header, 0000000021 bytes (0x00000015)
+2024-10-20 14:25:52.761  14:25:52.749329 http.c:802              <= Recv header: content-length: 196
+2024-10-20 14:25:52.761  14:25:52.749332 http.c:790              <= Recv header, 0000000037 bytes (0x00000025)
+2024-10-20 14:25:52.761  14:25:52.749333 http.c:802              <= Recv header: date: Sun, 20 Oct 2024 19:25:52 GMT
+2024-10-20 14:25:52.762  14:25:52.749335 http.c:790              <= Recv header, 0000000023 bytes (0x00000017)
+2024-10-20 14:25:52.762  14:25:52.749336 http.c:802              <= Recv header: x-frame-options: DENY
+2024-10-20 14:25:52.762  14:25:52.749352 http.c:790              <= Recv header, 0000000002 bytes (0x00000002)
+2024-10-20 14:25:52.762  14:25:52.749354 http.c:802              <= Recv header:
+2024-10-20 14:25:52.762  14:25:52.749367 http.c:843              == Info: Connection #0 to host git.cglcloud.com left intact
+2024-10-20 14:25:52.762  remote: Password authentication is not available for Git operations.
+2024-10-20 14:25:52.762  remote: You must use a personal access token or SSH key.
+2024-10-20 14:25:52.762  remote: See https://git.cglcloud.com/settings/tokens or https://git.cglcloud.com/settings/ssh
+2024-10-20 14:25:52.762  fatal: unable to access 'https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git/': The requested URL returned error: 403
+2024-10-20 14:25:52.762  
+2024-10-20 14:25:52.762  	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2846)
+2024-10-20 14:25:52.762  	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2185)
+2024-10-20 14:25:52.762  	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:635)
+2024-10-20 14:25:52.762  	at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler$GitCommandMasterToSlaveCallable.call(RemoteGitImpl.java:170)
+2024-10-20 14:25:52.762  	at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler$GitCommandMasterToSlaveCallable.call(RemoteGitImpl.java:161)
+2024-10-20 14:25:52.762  	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+2024-10-20 14:25:52.762  	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+2024-10-20 14:25:52.762  	at hudson.remoting.Request$2.run(Request.java:377)
+2024-10-20 14:25:52.763  	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
+2024-10-20 14:25:52.763  	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024-10-20 14:25:52.763  	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2024-10-20 14:25:52.763  	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2024-10-20 14:25:52.763  	at java.base/java.lang.Thread.run(Thread.java:829)
+2024-10-20 14:25:52.763  	Suppressed: hudson.remoting.Channel$CallSiteStackTrace: Remote call to ghs-jenkins-agent-01
+2024-10-20 14:25:52.763  		at hudson.remoting.Channel.attachCallSiteStackTrace(Channel.java:1787)
+2024-10-20 14:25:52.763  		at hudson.remoting.UserRequest$ExceptionResponse.retrieve(UserRequest.java:356)
+2024-10-20 14:25:52.763  		at hudson.remoting.Channel.call(Channel.java:1003)
+2024-10-20 14:25:52.763  		at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler.execute(RemoteGitImpl.java:153)
+2024-10-20 14:25:52.763  		at jdk.internal.reflect.GeneratedMethodAccessor327.invoke(Unknown Source)
+2024-10-20 14:25:52.763  		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2024-10-20 14:25:52.763  		at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2024-10-20 14:25:52.763  		at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler.invoke(RemoteGitImpl.java:138)
+2024-10-20 14:25:52.763  		at jdk.proxy20/jdk.proxy20.$Proxy100.execute(Unknown Source)
+2024-10-20 14:25:52.763  		at hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:997)
+2024-10-20 14:25:52.763  		at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1241)
+2024-10-20 14:25:52.763  		at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1305)
+2024-10-20 14:25:52.764  		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:136)
+2024-10-20 14:25:52.764  		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:101)
+2024-10-20 14:25:52.764  		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:88)
+2024-10-20 14:25:52.764  		at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+2024-10-20 14:25:52.764  		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+2024-10-20 14:25:52.764  		at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+2024-10-20 14:25:52.764  		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+2024-10-20 14:25:52.764  		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+2024-10-20 14:25:52.764  		at java.base/java.lang.Thread.run(Unknown Source)
+2024-10-20 14:25:52.764  ERROR: Error fetching remote repo 'origin'
+2024-10-20 14:25:52.764  ERROR: Maximum checkout retry attempts reached, aborting
+2024-10-20 14:25:52.853  [Pipeline] }
+2024-10-20 14:25:53.013  [Pipeline] // stage
+2024-10-20 14:25:53.147  [Pipeline] stage
+2024-10-20 14:25:53.174  [Pipeline] { (List Workspace Contents)
+2024-10-20 14:25:53.231  Stage "List Workspace Contents" skipped due to earlier failure(s)
+2024-10-20 14:25:53.282  [Pipeline] getContext
+2024-10-20 14:25:53.385  [Pipeline] }
+2024-10-20 14:25:53.520  [Pipeline] // stage
+2024-10-20 14:25:52.576   > git rev-parse --resolve-git-dir /home/CloudAdmin/Jenkins/workspace/GHSSelfServicePlatform/rds-restart-jenkins/.git # timeout=10
+2024-10-20 14:25:52.586   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
+2024-10-20 14:25:52.589  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 14:25:52.589   > git --version # timeout=10
+2024-10-20 14:25:52.591   > git --version # 'git version 2.43.5'
+2024-10-20 14:25:52.591   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+2024-10-20 14:25:53.654  [Pipeline] stage
+2024-10-20 14:25:53.680  [Pipeline] { (Create Job Folder)
+2024-10-20 14:25:53.735  Stage "Create Job Folder" skipped due to earlier failure(s)
+2024-10-20 14:25:53.786  [Pipeline] getContext
+2024-10-20 14:25:53.894  [Pipeline] }
+2024-10-20 14:25:54.028  [Pipeline] // stage
+2024-10-20 14:25:54.159  [Pipeline] stage
+2024-10-20 14:25:54.184  [Pipeline] { (Verify and Process YAML Files)
+2024-10-20 14:25:54.240  Stage "Verify and Process YAML Files" skipped due to earlier failure(s)
+2024-10-20 14:25:54.292  [Pipeline] getContext
+2024-10-20 14:25:54.400  [Pipeline] }
+2024-10-20 14:25:54.538  [Pipeline] // stage
+2024-10-20 14:25:54.673  [Pipeline] stage
+2024-10-20 14:25:54.699  [Pipeline] { (Delete Jobs if YAML Removed)
+2024-10-20 14:25:54.757  Stage "Delete Jobs if YAML Removed" skipped due to earlier failure(s)
+2024-10-20 14:25:54.807  [Pipeline] getContext
+2024-10-20 14:25:54.912  [Pipeline] }
+2024-10-20 14:25:55.049  [Pipeline] // stage
+2024-10-20 14:25:55.130  [Pipeline] }
+2024-10-20 14:25:55.264  [Pipeline] // withEnv
+2024-10-20 14:25:55.346  [Pipeline] }
+2024-10-20 14:25:55.480  [Pipeline] // withCredentials
+2024-10-20 14:25:55.563  [Pipeline] }
+2024-10-20 14:25:55.695  [Pipeline] // withEnv
+2024-10-20 14:25:55.777  [Pipeline] }
+2024-10-20 14:25:55.931  [Pipeline] // node
+2024-10-20 14:25:56.065  [Pipeline] End of Pipeline
+2024-10-20 14:25:56.388  ERROR: Error fetching remote repo 'origin'
+2024-10-20 14:25:56.466  Finished: FAILURE
