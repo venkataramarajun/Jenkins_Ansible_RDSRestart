@@ -1,0 +1,50 @@
+2024-10-20 14:06:44.119  Started by user PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 14:06:44.120  Running as PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 14:06:44.124  Checking out git https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git into /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf to read Platform-SelfService.Jenkinsfile
+2024-10-20 14:06:44.146  The recommended git tool is: NONE
+2024-10-20 14:06:44.146  using credential ps590443_token
+2024-10-20 14:06:44.177   > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf/.git # timeout=10
+2024-10-20 14:06:44.202  Fetching changes from the remote Git repository
+2024-10-20 14:06:44.235   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
+2024-10-20 14:06:44.275  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 14:06:44.275   > git --version # timeout=10
+2024-10-20 14:06:44.283   > git --version # 'git version 2.39.2'
+2024-10-20 14:06:44.283  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
+2024-10-20 14:06:44.364   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+2024-10-20 14:06:44.866   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+2024-10-20 14:06:44.892  Checking out Revision 571bfd38735f3f61b432eded5858549e3b90bbc6 (refs/remotes/origin/main)
+2024-10-20 14:06:44.892   > git config core.sparsecheckout # timeout=10
+2024-10-20 14:06:44.905   > git checkout -f 571bfd38735f3f61b432eded5858549e3b90bbc6 # timeout=10
+2024-10-20 14:06:45.044  Commit message: "Update Platform-SelfService.Jenkinsfile"
+2024-10-20 14:06:45.048   > git rev-list --no-walk faebed199d9f557855f58ac4bbc2b602e1f18c06 # timeout=10
+2024-10-20 14:06:45.877  org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+2024-10-20 14:06:45.877  WorkflowScript: 2: Only one agent type is allowed per agent section @ line 2, column 9.
+2024-10-20 14:06:45.877             agent {
+2024-10-20 14:06:45.877             ^
+2024-10-20 14:06:45.877  
+2024-10-20 14:06:45.877  WorkflowScript: 1: Missing required section "stages" @ line 1, column 5.
+2024-10-20 14:06:45.877         pipeline {
+2024-10-20 14:06:45.877         ^
+2024-10-20 14:06:45.877  
+2024-10-20 14:06:45.877  WorkflowScript: 2: No agent type specified. Must be one of [any, docker, dockerContainer, dockerfile, label, none] @ line 2, column 9.
+2024-10-20 14:06:45.877             agent {
+2024-10-20 14:06:45.877             ^
+2024-10-20 14:06:45.877  
+2024-10-20 14:06:45.877  3 errors
+2024-10-20 14:06:45.877  
+2024-10-20 14:06:45.877  	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+2024-10-20 14:06:45.877  	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1107)
+2024-10-20 14:06:45.877  	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:624)
+2024-10-20 14:06:45.878  	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
+2024-10-20 14:06:45.878  	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
+2024-10-20 14:06:45.878  	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
+2024-10-20 14:06:45.878  	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
+2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
+2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
+2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
+2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:635)
+2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:581)
+2024-10-20 14:06:45.878  	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:335)
+2024-10-20 14:06:45.878  	at hudson.model.ResourceController.execute(ResourceController.java:101)
+2024-10-20 14:06:45.878  	at hudson.model.Executor.run(Executor.java:442)
+2024-10-20 14:06:45.957  Finished: FAILURE
