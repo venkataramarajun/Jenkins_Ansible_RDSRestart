@@ -5,7 +5,8 @@ pipeline {
         REPO_URL = 'https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git'  // GitHub repository URL
         JOB_FOLDER = 'GHSSelfServicePlatform'  // Folder in Jenkins where the jobs should be created
         JOB_TRACKING_FILE = 'created_jobs.log'  // File to track created jobs
-        JENKINS_TOKEN = credentials("pavani_jenkins_api_token")  // Use Jenkins API token
+        YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'  // Path where the YAML files are placed
+        JENKINS_TOKEN = credentials("ps590443_token")  // Use Jenkins API token for authentication
     }
 
     stages {
@@ -16,13 +17,13 @@ pipeline {
             }
         }
 
-        stage('List Workspace Contents') {
+        stage('List YAML Files') {
             steps {
-                echo 'Listing workspace contents after checkout...'
+                echo "Listing YAML files from ${YAML_INPUT_PATH} after checkout..."
                 script {
-                    def yamlFiles = findFiles(glob: '**/*.yml')  // Find all .yml files in the workspace
+                    def yamlFiles = findFiles(glob: "${YAML_INPUT_PATH}/*.yml")  // Find all YAML files in the specific path
                     if (yamlFiles.length == 0) {
-                        error("No YAML files found to process.")
+                        error("No YAML files found in ${YAML_INPUT_PATH} to process.")
                     } else {
                         echo "YAML files found: ${yamlFiles.collect { it.path }}"  // Collect file paths from FileWrapper objects
                         env.YAML_FILES = yamlFiles.collect { it.path }.join(',')
