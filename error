@@ -71,41 +71,41 @@ pipeline {
                             echo "Skipping ${yamlFile} due to missing required fields (db_name, region, schedule)."
                         } else {
                             echo "Creating job for DB: ${db_name}, Region: ${region}, Schedule: ${schedule}"
-                            }
-                            // Create or update the Jenkins job using Job DSL with Poll SCM schedule
-                            jobDsl scriptText: '''
-    pipelineJob("${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule") {
-        description('Job to restart RDS DB: ${db_name}')
-        triggers {
-            scm('${schedule}')  // Poll SCM with schedule from YAML
-        }
-        definition {
-            cps {
-                script('''
-                    pipeline {
-                        agent any
-                        stages {
-                            stage('Restart RDS DB') {
-                                steps {
-                                    echo "Restarting RDS DB: ${db_name} in region: ${region}"
-                                    
-                                    // Checkout the Ansible playbook repository
-                                    checkout([$class: 'GitSCM', branches: [[name: '*/main']],
-                                        userRemoteConfigs: [[url: '${PLAYBOOK_REPO_URL}']],
-                                        credentialsId: 'git_credentials'])
 
-                                    // Trigger Ansible playbook
-                                    sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
+                            // Create or update the Jenkins job using Job DSL with Poll SCM schedule
+                            jobDsl scriptText: """
+                            pipelineJob("${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule") {
+                                description('Job to restart RDS DB: ${db_name}')
+                                triggers {
+                                    scm('${schedule}')  // Poll SCM with schedule from YAML
+                                }
+                                definition {
+                                    cps {
+                                        script('''
+                                            pipeline {
+                                                agent any
+                                                stages {
+                                                    stage('Restart RDS DB') {
+                                                        steps {
+                                                            echo "Restarting RDS DB: ${db_name} in region: ${region}"
+                                                            
+                                                            // Checkout the Ansible playbook repository
+                                                            checkout([$class: 'GitSCM', branches: [[name: '*/main']],
+                                                                userRemoteConfigs: [[url: '${PLAYBOOK_REPO_URL}']],
+                                                                credentialsId: 'git_credentials'])
+
+                                                            // Trigger Ansible playbook
+                                                            sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ''')
+                                    }
                                 }
                             }
-                        }
-                    }
-                ''')
-            }
-        }
-    }
-'''
-                jobNamesCreated << "${db_name}-restart-schedule"  // Track created jobs
+                            """
+                            jobNamesCreated << "${db_name}-restart-schedule"  // Track created jobs
                         }
                     }
 
