@@ -1,35 +1,149 @@
+Error:
+2024-10-20 18:15:47.833  Started by user PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 18:15:47.833  Running as PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
+2024-10-20 18:15:47.834  Checking out git https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git into /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf to read Platform-SelfService.Jenkinsfile
+2024-10-20 18:15:47.861  The recommended git tool is: NONE
+2024-10-20 18:15:47.861  using credential ps590443_token
+2024-10-20 18:15:47.893   > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf/.git # timeout=10
+2024-10-20 18:15:47.917  Fetching changes from the remote Git repository
+2024-10-20 18:15:47.945   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
+2024-10-20 18:15:47.988  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 18:15:47.988   > git --version # timeout=10
+2024-10-20 18:15:47.996   > git --version # 'git version 2.39.2'
+2024-10-20 18:15:47.996  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
+2024-10-20 18:15:48.082   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+2024-10-20 18:15:48.599   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+2024-10-20 18:15:48.619  Checking out Revision afd77a290f775df932294986b2dd21a04b882bba (refs/remotes/origin/main)
+2024-10-20 18:15:48.620   > git config core.sparsecheckout # timeout=10
+2024-10-20 18:15:48.632   > git checkout -f afd77a290f775df932294986b2dd21a04b882bba # timeout=10
+2024-10-20 18:15:48.777  Commit message: "Update Platform-SelfService.Jenkinsfile"
+2024-10-20 18:15:48.780   > git rev-list --no-walk f61e41a980bab2a081ba94a8403f051345a2a109 # timeout=10
+2024-10-20 18:15:49.026  [Pipeline] Start of Pipeline
+2024-10-20 18:15:49.281  [Pipeline] node
+2024-10-20 18:15:49.416  Running on ghs-jenkins-agent-01 in /home/CloudAdmin/Jenkins/workspace/GHSSelfServicePlatform/rds-restart-jenkins
+2024-10-20 18:15:49.447  [Pipeline] {
+2024-10-20 18:15:49.593  [Pipeline] stage
+2024-10-20 18:15:49.620  [Pipeline] { (Declarative: Checkout SCM)
+2024-10-20 18:15:49.775  [Pipeline] checkout
+2024-10-20 18:15:49.844  The recommended git tool is: NONE
+2024-10-20 18:15:49.849  using credential ps590443_token
+2024-10-20 18:15:49.880  Fetching changes from the remote Git repository
+2024-10-20 18:15:50.119  Checking out Revision afd77a290f775df932294986b2dd21a04b882bba (refs/remotes/origin/main)
+2024-10-20 18:15:50.127  Commit message: "Update Platform-SelfService.Jenkinsfile"
+2024-10-20 18:15:50.199  [Pipeline] }
+2024-10-20 18:15:49.878   > git rev-parse --resolve-git-dir /home/CloudAdmin/Jenkins/workspace/GHSSelfServicePlatform/rds-restart-jenkins/.git # timeout=10
+2024-10-20 18:15:49.884   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
+2024-10-20 18:15:49.889  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
+2024-10-20 18:15:49.889   > git --version # timeout=10
+2024-10-20 18:15:49.891   > git --version # 'git version 2.43.5'
+2024-10-20 18:15:49.892  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
+2024-10-20 18:15:49.894   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+2024-10-20 18:15:50.117   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+2024-10-20 18:15:50.120   > git config core.sparsecheckout # timeout=10
+2024-10-20 18:15:50.122   > git checkout -f afd77a290f775df932294986b2dd21a04b882bba # timeout=10
+2024-10-20 18:21:57.012  [Pipeline] // stage
+2024-10-20 18:21:57.125  [Pipeline] withEnv
+2024-10-20 18:21:57.152  [Pipeline] {
+2024-10-20 18:21:57.295  [Pipeline] withCredentials
+2024-10-20 18:21:57.353  Masking supported pattern matches of $JENKINS_TOKEN or $JENKINS_TOKEN_PSW
+2024-10-20 18:21:57.380  [Pipeline] {
+2024-10-20 18:21:57.491  [Pipeline] withEnv
+2024-10-20 18:21:57.519  [Pipeline] {
+2024-10-20 18:21:57.660  [Pipeline] stage
+2024-10-20 18:21:57.686  [Pipeline] { (List YAML Files from SCM)
+2024-10-20 18:21:57.806  [Pipeline] echo
+2024-10-20 18:21:57.862  Listing YAML files from the checked-out repository...
+2024-10-20 18:21:57.916  [Pipeline] script
+2024-10-20 18:21:57.944  [Pipeline] {
+2024-10-20 18:21:58.056  [Pipeline] findFiles
+2024-10-20 18:21:58.203  [Pipeline] echo
+2024-10-20 18:21:58.231  YAML files found: [User_Inputs/RestartRDS/dbiusameacd2001.yml, User_Inputs/RestartRDS/dbiusameacd2002.yml, User_Inputs/RestartRDS/dbiusameacd2003.yml, User_Inputs/RestartRDS/dbiusameacd2004.yml]
+2024-10-20 18:21:58.347  [Pipeline] }
+2024-10-20 18:21:58.467  [Pipeline] // script
+2024-10-20 18:21:58.524  [Pipeline] }
+2024-10-20 18:21:58.638  [Pipeline] // stage
+2024-10-20 18:21:58.751  [Pipeline] stage
+2024-10-20 18:21:58.777  [Pipeline] { (Create AWS-RDS-Restart Folder)
+2024-10-20 18:21:58.899  [Pipeline] script
+2024-10-20 18:21:58.929  [Pipeline] {
+2024-10-20 18:21:59.042  [Pipeline] jobDsl
+2024-10-20 18:21:59.102  Processing provided DSL script
+2024-10-20 18:21:59.518  Existing items:
+2024-10-20 18:21:59.518      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart'}
+2024-10-20 18:21:59.518  Unreferenced items:
+2024-10-20 18:21:59.518      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2001-restart-schedule'}
+2024-10-20 18:21:59.518      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2002-restart-schedule'}
+2024-10-20 18:21:59.519      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2003-restart-schedule'}
+2024-10-20 18:21:59.519      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2004-restart-schedule'}
+2024-10-20 18:21:59.612  [Pipeline] echo
+2024-10-20 18:21:59.642  Job folder 'GHSSelfServicePlatform/AWS-RDS-Restart' created or already exists.
+2024-10-20 18:21:59.669  [Pipeline] }
+2024-10-20 18:21:59.787  [Pipeline] // script
+2024-10-20 18:21:59.844  [Pipeline] }
+2024-10-20 18:21:59.958  [Pipeline] // stage
+2024-10-20 18:22:00.070  [Pipeline] stage
+2024-10-20 18:22:00.098  [Pipeline] { (Create Jobs in AWS-RDS-Restart Folder)
+2024-10-20 18:22:00.213  [Pipeline] script
+2024-10-20 18:22:00.239  [Pipeline] {
+2024-10-20 18:22:00.360  [Pipeline] echo
+2024-10-20 18:22:00.414  Processing User_Inputs/RestartRDS/dbiusameacd2001.yml...
+2024-10-20 18:22:00.480  [Pipeline] readYaml
+2024-10-20 18:22:00.648  [Pipeline] echo
+2024-10-20 18:22:00.675  Creating job for DB: dbiusameacd2001, Region: us-east-1, Schedule: H 10 15 * *
+2024-10-20 18:22:00.733  [Pipeline] jobDsl
+2024-10-20 18:22:00.767  Processing provided DSL script
+2024-10-20 18:22:00.880  [Pipeline] }
+2024-10-20 18:22:01.067  [Pipeline] // script
+2024-10-20 18:22:01.192  [Pipeline] }
+2024-10-20 18:22:01.336  [Pipeline] // stage
+2024-10-20 18:22:01.479  [Pipeline] stage
+2024-10-20 18:22:01.506  [Pipeline] { (Delete Jobs if YAML Removed)
+2024-10-20 18:22:01.565  Stage "Delete Jobs if YAML Removed" skipped due to earlier failure(s)
+2024-10-20 18:22:01.619  [Pipeline] getContext
+2024-10-20 18:22:01.730  [Pipeline] }
+2024-10-20 18:22:01.874  [Pipeline] // stage
+2024-10-20 18:22:01.965  [Pipeline] }
+2024-10-20 18:22:02.104  [Pipeline] // withEnv
+2024-10-20 18:22:02.189  [Pipeline] }
+2024-10-20 18:22:02.327  [Pipeline] // withCredentials
+2024-10-20 18:22:02.410  [Pipeline] }
+2024-10-20 18:22:02.551  [Pipeline] // withEnv
+2024-10-20 18:22:02.636  [Pipeline] }
+2024-10-20 18:22:02.792  [Pipeline] // node
+2024-10-20 18:22:02.930  [Pipeline] End of Pipeline
+2024-10-20 18:22:03.327  ERROR: startup failed:
+2024-10-20 18:22:03.327  script: 8: unexpected token:  @ line 8, column 48.
+2024-10-20 18:22:03.327                            script(
+2024-10-20 18:22:03.327                                   ^
+2024-10-20 18:22:03.327  
+2024-10-20 18:22:03.327  1 error
+2024-10-20 18:22:03.327  
+2024-10-20 18:22:03.411  Finished: FAILURE
+
+
+code: 
 pipeline {
     agent { label 'docker-build-aws' }
 
     environment {
-        JOB_PARENT_FOLDER = 'GHSSelfServicePlatform'
-        JOB_FOLDER = 'AWS-RDS-Restart'
+        JOB_PARENT_FOLDER = 'GHSSelfServicePlatform'  // The parent folder where 'AWS-RDS-Restart' will be created
+        JOB_FOLDER = 'AWS-RDS-Restart'  // Folder to be created inside GHSSelfServicePlatform
         JOB_TRACKING_FILE = 'created_jobs.log'
         YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'
         JENKINS_TOKEN = credentials("pavani_jenkins_api_token")
-        PLAYBOOK_REPO_URL = 'https://git.cglcloud.com/IHSCloudPlatform/Maintenance/tree/rds-restart/Playbooks/RDS_Reboot/rds-restart.git'
-        PLAYBOOK_PATH = 'Playbooks/RDS_Reboot/rds-restart/rdsrestart.yaml'
     }
 
     stages {
-        // Checkout the repository containing the Ansible playbook
-        stage('Checkout Playbook Repo') {
-            steps {
-                git branch: 'main', url: "${PLAYBOOK_REPO_URL}", credentialsId: 'git_credentials'
-                echo "Ansible playbook repository checked out."
-            }
-        }
-
         // List YAML files after the repository checkout via SCM in the job configuration
         stage('List YAML Files from SCM') {
             steps {
                 echo 'Listing YAML files from the checked-out repository...'
                 script {
-                    def yamlFiles = findFiles(glob: '**/*.yml')
+                    def yamlFiles = findFiles(glob: '**/*.yml')  // Find all YAML files in the workspace
                     if (yamlFiles.length == 0) {
                         error("No YAML files found to process.")
                     } else {
-                        echo "YAML files found: ${yamlFiles.collect { it.path }}"
+                        echo "YAML files found: ${yamlFiles.collect { it.path }}"  // Collect file paths from FileWrapper objects
                         env.YAML_FILES = yamlFiles.collect { it.path }.join(',')
                     }
                 }
@@ -40,6 +154,7 @@ pipeline {
         stage('Create AWS-RDS-Restart Folder') {
             steps {
                 script {
+                    // Create the 'AWS-RDS-Restart' folder under 'GHSSelfServicePlatform'
                     jobDsl scriptText: """
                     folder('${JOB_PARENT_FOLDER}/${JOB_FOLDER}') {
                         displayName('AWS RDS Restart Jobs')
@@ -51,8 +166,8 @@ pipeline {
             }
         }
 
-        // Create the jobs inside AWS-RDS-Restart folder with Poll SCM as the build trigger
-        stage('Create Jobs in AWS-RDS-Restart Folder with Poll SCM') {
+        // Create the jobs inside AWS-RDS-Restart folder
+        stage('Create Jobs in AWS-RDS-Restart Folder') {
             steps {
                 script {
                     def yamlFiles = env.YAML_FILES.split(',')
@@ -71,42 +186,37 @@ pipeline {
                         } else {
                             echo "Creating job for DB: ${db_name}, Region: ${region}, Schedule: ${schedule}"
 
-                            // Create or update the Jenkins job using Job DSL with Poll SCM schedule
+                            // Create or update the Jenkins job using Job DSL with cron schedule
                             jobDsl scriptText: """
-                            pipelineJob("${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule") {
+                            pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
                                 description('Job to restart RDS DB: ${db_name}')
                                 triggers {
-                                    scm('${schedule}')
+                                    cron('${schedule}')  // Set the cron schedule from YAML
                                 }
                                 definition {
                                     cps {
-                                        script('''
+                                        script("""
                                             pipeline {
                                                 agent any
                                                 stages {
                                                     stage('Restart RDS DB') {
                                                         steps {
                                                             echo "Restarting RDS DB: ${db_name} in region: ${region}"
-                                                            
-                                                            checkout([$class: 'GitSCM', branches: [[name: '*/main']],
-                                                                userRemoteConfigs: [[url: '${PLAYBOOK_REPO_URL}']],
-                                                                credentialsId: 'git_credentials'])
-
-                                                            sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
+                                                            sh "ansible-playbook /path/to/playbook/restart_rds.yml -e db_name=${db_name} -e region=${region}"
                                                         }
                                                     }
                                                 }
                                             }
-                                        ''')
+                                        """)
                                     }
                                 }
                             }
                             """
-                            jobNamesCreated << "${db_name}-restart-schedule"
+                            jobNamesCreated << "${db_name}-restart-schedule"  // Track created jobs
                         }
                     }
 
-                    writeFile file: "${JOB_TRACKING_FILE}", text: jobNamesCreated.join('\n')
+                    writeFile file: "${JOB_TRACKING_FILE}", text: jobNamesCreated.join('\n')  // Store created jobs in file
                     env.CREATED_JOBS = jobNamesCreated.join(',')
                 }
             }
@@ -116,12 +226,15 @@ pipeline {
         stage('Delete Jobs if YAML Removed') {
             steps {
                 script {
-                    def createdJobs = env.CREATED_JOBS.split(',')
+                    def createdJobs = env.CREATED_JOBS.split(',')  // Get jobs created in this run
+
+                    // List the jobs tracked from the last run
                     def previousJobs = readFile("${JOB_TRACKING_FILE}").split('\n').findAll { it }
 
                     echo "Previous jobs: ${previousJobs}"
                     echo "Created jobs in this run: ${createdJobs}"
 
+                    // Jobs to delete are those in the previous list but not in the current run
                     def jobsToDelete = previousJobs - createdJobs
 
                     jobsToDelete.each { jobName ->
