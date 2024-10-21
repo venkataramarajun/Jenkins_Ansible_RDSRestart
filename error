@@ -7,6 +7,7 @@ pipeline {
         JOB_TRACKING_FILE = 'created_jobs.log'
         YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'
         JENKINS_TOKEN = credentials("pavani_jenkins_api_token")
+        PLAYBOOK_PATH = '/path/to/your/ansible/playbook/rds-restart.yml'  // Update with your Ansible playbook path
     }
 
     stages {
@@ -78,7 +79,9 @@ pipeline {
                                                     stage('Restart RDS DB') {
                                                         steps {
                                                             echo "Restarting RDS DB: ${db_name} in region: ${region}"
-                                                            sh "ansible-playbook /path/to/playbook/restart_rds.yml -e db_name=${db_name} -e region=${region}"
+                                                            
+                                                            // Trigger Ansible playbook
+                                                            sh "ansible-playbook ${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
                                                         }
                                                     }
                                                 }
