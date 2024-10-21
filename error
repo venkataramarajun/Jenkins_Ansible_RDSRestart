@@ -43,8 +43,8 @@ pipeline {
             }
         }
 
-        // Create the jobs inside AWS-RDS-Restart folder
-        stage('Create Jobs in AWS-RDS-Restart Folder') {
+        // Create the jobs inside AWS-RDS-Restart folder with Poll SCM as the build trigger
+        stage('Create Jobs in AWS-RDS-Restart Folder with Poll SCM') {
             steps {
                 script {
                     def yamlFiles = env.YAML_FILES.split(',')
@@ -56,19 +56,19 @@ pipeline {
 
                         def db_name = yamlContent.db_name
                         def region = yamlContent.region
-                        def schedule = yamlContent.schedule
+                        def schedule = yamlContent.schedule  // Using this schedule for Poll SCM trigger
 
                         if (!db_name || !region || !schedule) {
                             echo "Skipping ${yamlFile} due to missing required fields (db_name, region, schedule)."
                         } else {
                             echo "Creating job for DB: ${db_name}, Region: ${region}, Schedule: ${schedule}"
 
-                            // Create or update the Jenkins job using Job DSL with cron schedule
+                            // Create or update the Jenkins job using Job DSL and set Poll SCM schedule
                             jobDsl scriptText: """
                             pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
                                 description('Job to restart RDS DB: ${db_name}')
                                 triggers {
-                                    cron('${schedule}')  // Set the cron schedule from YAML
+                                    scm('${schedule}')  // Schedule in Poll SCM section from YAML
                                 }
                                 definition {
                                     cps {
@@ -80,8 +80,8 @@ pipeline {
                                                         steps {
                                                             echo "Restarting RDS DB: ${db_name} in region: ${region}"
                                                             
-                                                            // Trigger Ansible playbook
-                                                            sh "ansible-playbook ${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
+                                                            // Trigger the Ansible playbook to restart RDS
+                                                            sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
                                                         }
                                                     }
                                                 }
