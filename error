@@ -68,8 +68,21 @@ pipeline {
                             pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
                                 description('Job to restart RDS DB: ${db_name}')
                                 triggers {
-                                    scm('${schedule}')  // Schedule in Poll SCM section from YAML
+                                    scm('${schedule}')  // Poll SCM with schedule from YAML
                                 }
+                                definition {
+                                    cpsScm {
+                                        scriptPath('Jenkinsfile')
+                                        lightweight(true)
+                                    }
+                                }
+                            }
+                            """
+                            jobNamesCreated << "${db_name}-restart-schedule"  // Track created jobs
+
+                            // Now configuring the created job with the actual Ansible Playbook trigger
+                            jobDsl scriptText: """
+                            pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
                                 definition {
                                     cps {
                                         script('''
@@ -91,7 +104,6 @@ pipeline {
                                 }
                             }
                             """
-                            jobNamesCreated << "${db_name}-restart-schedule"  // Track created jobs
                         }
                     }
 
