@@ -11,7 +11,6 @@ pipeline {
     }
 
     stages {
-        // List YAML files after the repository checkout via SCM in the job configuration
         stage('List YAML Files from SCM') {
             steps {
                 echo 'Listing YAML files from the checked-out repository...'
@@ -27,7 +26,6 @@ pipeline {
             }
         }
 
-        // Create the parent folder (GHSSelfServicePlatform) and the AWS-RDS-Restart folder inside it
         stage('Create AWS-RDS-Restart Folder') {
             steps {
                 script {
@@ -35,7 +33,7 @@ pipeline {
                     jobDsl scriptText: """
                     folder('${JOB_PARENT_FOLDER}/${JOB_FOLDER}') {
                         displayName('AWS RDS Restart Jobs')
-                        description('Folder for RDS restart jobs')
+                        description('Folder containing jobs to restart AWS RDS instances.')
                     }
                     """
                     echo "Job folder '${JOB_PARENT_FOLDER}/${JOB_FOLDER}' created or already exists."
@@ -43,7 +41,6 @@ pipeline {
             }
         }
 
-        // Create the jobs inside AWS-RDS-Restart folder with Poll SCM schedule
         stage('Create Jobs in AWS-RDS-Restart Folder') {
             steps {
                 script {
@@ -66,7 +63,7 @@ pipeline {
                             // Create or update the Jenkins job using Job DSL with cron trigger
                             jobDsl scriptText: """
                             pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
-                                description('Job to restart RDS DB: ${db_name}')
+                                description('Job to restart RDS DB: ${db_name} in region: ${region}')
                                 triggers {
                                     cron('${schedule}')  // Cron schedule from YAML
                                 }
@@ -101,7 +98,6 @@ pipeline {
             }
         }
 
-        // Delete jobs if their corresponding YAML files are removed
         stage('Delete Jobs if YAML Removed') {
             steps {
                 script {
