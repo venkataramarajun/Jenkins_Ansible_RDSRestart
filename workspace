@@ -7,19 +7,10 @@ pipeline {
         JOB_TRACKING_FILE = 'created_jobs.log'
         YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'
         JENKINS_TOKEN = credentials("pavani_jenkins_api_token")
-        PLAYBOOK_REPO_URL = 'https://git.cglcloud.com/IHSCloudPlatform/Maintenance/tree/rds-restart/Playbooks/RDS_Reboot/rds-restart.git' // Git repo containing the ansible playbook
-        PLAYBOOK_PATH = 'Playbooks/RDS_Reboot/rds-restart/rdsrestart.yaml'  // Path to your ansible playbook in the Git repo
+        PLAYBOOK_PATH = 'rds-restart.yml'  // Path to the playbook in the same repository
     }
 
     stages {
-        // Checkout the repository containing the Ansible playbook
-        stage('Checkout Playbook Repo') {
-            steps {
-                git branch: 'main', url: "${PLAYBOOK_REPO_URL}", credentialsId: 'git_credentials'  // Replace 'git_credentials' with the Jenkins credential ID for your git repo
-                echo "Ansible playbook repository checked out."
-            }
-        }
-
         // List YAML files after the repository checkout via SCM in the job configuration
         stage('List YAML Files from SCM') {
             steps {
@@ -52,8 +43,8 @@ pipeline {
             }
         }
 
-        // Create the jobs inside AWS-RDS-Restart folder with Poll SCM as the build trigger
-        stage('Create Jobs in AWS-RDS-Restart Folder with Poll SCM') {
+        // Create the jobs inside AWS-RDS-Restart folder with Poll SCM schedule
+        stage('Create Jobs in AWS-RDS-Restart Folder') {
             steps {
                 script {
                     def yamlFiles = env.YAML_FILES.split(',')
@@ -65,19 +56,19 @@ pipeline {
 
                         def db_name = yamlContent.db_name
                         def region = yamlContent.region
-                        def schedule = yamlContent.schedule  // Using this schedule for Poll SCM trigger
+                        def schedule = yamlContent.schedule  // Using this schedule for cron trigger
 
                         if (!db_name || !region || !schedule) {
                             echo "Skipping ${yamlFile} due to missing required fields (db_name, region, schedule)."
                         } else {
                             echo "Creating job for DB: ${db_name}, Region: ${region}, Schedule: ${schedule}"
 
-                            // Create or update the Jenkins job using Job DSL with Poll SCM schedule
+                            // Create or update the Jenkins job using Job DSL with cron trigger
                             jobDsl scriptText: """
-                            pipelineJob("${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule") {
+                            pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
                                 description('Job to restart RDS DB: ${db_name}')
                                 triggers {
-                                    scm('${schedule}')  // Poll SCM with schedule from YAML
+                                    cron('${schedule}')  // Cron schedule from YAML
                                 }
                                 definition {
                                     cps {
@@ -88,11 +79,6 @@ pipeline {
                                                     stage('Restart RDS DB') {
                                                         steps {
                                                             echo "Restarting RDS DB: ${db_name} in region: ${region}"
-                                                            
-                                                            // Checkout the Ansible playbook repository
-                                                            checkout([$class: 'GitSCM', branches: [[name: '*/main']],
-                                                                userRemoteConfigs: [[url: '${PLAYBOOK_REPO_URL}']],
-                                                                credentialsId: 'git_credentials'])
 
                                                             // Trigger Ansible playbook
                                                             sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
