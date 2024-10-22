@@ -68,7 +68,7 @@ pipeline {
                             pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
                                 description('Job to restart RDS DB: ${db_name}')
                                 triggers {
-                                    scm('${schedule}')  // Poll SCM with schedule from YAML
+                                    cron('${schedule}')  // Poll SCM with schedule from YAML
                                 }
                                 definition {
                                     cps {
