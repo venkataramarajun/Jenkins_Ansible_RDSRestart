@@ -1,182 +1,130 @@
-2024-10-22 18:06:32.991  Started by user PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
-2024-10-22 18:06:32.991  Running as PAVANI_GODUGULURI@CRGL-THIRDPARTY.COM
-2024-10-22 18:06:32.994  Checking out git https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git into /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf to read Platform-SelfService.Jenkinsfile
-2024-10-22 18:06:33.016  The recommended git tool is: NONE
-2024-10-22 18:06:33.016  using credential ps590443_token
-2024-10-22 18:06:33.048   > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/GHSSelfServicePlatform/rds-restart-jenkins@script/a629c0d245ba9d0e0a2196e324c159b66ac418d06ba83fb89d719531bcb04aaf/.git # timeout=10
-2024-10-22 18:06:33.060  Fetching changes from the remote Git repository
-2024-10-22 18:06:33.084   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
-2024-10-22 18:06:33.123  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
-2024-10-22 18:06:33.123   > git --version # timeout=10
-2024-10-22 18:06:33.131   > git --version # 'git version 2.39.2'
-2024-10-22 18:06:33.131  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
-2024-10-22 18:06:33.206   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
-2024-10-22 18:06:33.730   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-2024-10-22 18:06:33.752  Checking out Revision 28de832c45f78bf489669d6d1813f0c8768def26 (refs/remotes/origin/main)
-2024-10-22 18:06:33.752   > git config core.sparsecheckout # timeout=10
-2024-10-22 18:06:33.765   > git checkout -f 28de832c45f78bf489669d6d1813f0c8768def26 # timeout=10
-2024-10-22 18:06:33.913  Commit message: "Update Platform-SelfService.Jenkinsfile"
-2024-10-22 18:06:33.916   > git rev-list --no-walk 17b38603cb1183546fa1b18121475a35736a5e61 # timeout=10
-2024-10-22 18:06:34.160  [Pipeline] Start of Pipeline
-2024-10-22 18:06:34.432  [Pipeline] node
-2024-10-22 18:06:34.571  Running on ghs-jenkins-agent-01 in /home/CloudAdmin/Jenkins/workspace/GHSSelfServicePlatform/rds-restart-jenkins
-2024-10-22 18:06:34.599  [Pipeline] {
-2024-10-22 18:06:34.745  [Pipeline] stage
-2024-10-22 18:06:34.772  [Pipeline] { (Declarative: Checkout SCM)
-2024-10-22 18:06:34.910  [Pipeline] checkout
-2024-10-22 18:06:34.976  The recommended git tool is: NONE
-2024-10-22 18:06:34.993  using credential ps590443_token
-2024-10-22 18:06:35.030  Fetching changes from the remote Git repository
-2024-10-22 18:06:35.281  Checking out Revision 28de832c45f78bf489669d6d1813f0c8768def26 (refs/remotes/origin/main)
-2024-10-22 18:06:35.289  Commit message: "Update Platform-SelfService.Jenkinsfile"
-2024-10-22 18:06:35.365  [Pipeline] }
-2024-10-22 18:06:35.478  [Pipeline] // stage
-2024-10-22 18:06:35.595  [Pipeline] withEnv
-2024-10-22 18:06:35.622  [Pipeline] {
-2024-10-22 18:06:35.757  [Pipeline] withCredentials
-2024-10-22 18:06:35.811  Masking supported pattern matches of $JENKINS_TOKEN or $JENKINS_TOKEN_PSW
-2024-10-22 18:06:35.838  [Pipeline] {
-2024-10-22 18:06:35.946  [Pipeline] withEnv
-2024-10-22 18:06:35.972  [Pipeline] {
-2024-10-22 18:06:35.026   > git rev-parse --resolve-git-dir /home/CloudAdmin/Jenkins/workspace/GHSSelfServicePlatform/rds-restart-jenkins/.git # timeout=10
-2024-10-22 18:06:35.033   > git config remote.origin.url https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git # timeout=10
-2024-10-22 18:06:35.036  Fetching upstream changes from https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git
-2024-10-22 18:06:35.036   > git --version # timeout=10
-2024-10-22 18:06:35.038   > git --version # 'git version 2.43.5'
-2024-10-22 18:06:35.038  using GIT_ASKPASS to set credentials Token based Process account access to Github repos for Cloud Platform team
-2024-10-22 18:06:35.040   > git fetch --tags --force --progress -- https://git.cglcloud.com/IHSCloudPlatform/Platform-SelfService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
-2024-10-22 18:06:35.278   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-2024-10-22 18:06:35.282   > git config core.sparsecheckout # timeout=10
-2024-10-22 18:06:35.284   > git checkout -f 28de832c45f78bf489669d6d1813f0c8768def26 # timeout=10
-2024-10-22 18:06:36.106  [Pipeline] stage
-2024-10-22 18:06:36.133  [Pipeline] { (List YAML Files from SCM)
-2024-10-22 18:06:36.251  [Pipeline] echo
-2024-10-22 18:06:36.305  Listing YAML files from the checked-out repository...
-2024-10-22 18:06:36.357  [Pipeline] script
-2024-10-22 18:06:36.385  [Pipeline] {
-2024-10-22 18:06:36.495  [Pipeline] findFiles
-2024-10-22 18:06:36.634  [Pipeline] echo
-2024-10-22 18:06:36.663  YAML files found: [User_Inputs/RestartRDS/dbiusameacd2001.yml, User_Inputs/RestartRDS/dbiusameacd2002.yml, User_Inputs/RestartRDS/dbiusameacd2003.yml, User_Inputs/RestartRDS/dbiusameacd2004.yml]
-2024-10-22 18:06:36.776  [Pipeline] }
-2024-10-22 18:06:36.886  [Pipeline] // script
-2024-10-22 18:06:36.944  [Pipeline] }
-2024-10-22 18:06:37.056  [Pipeline] // stage
-2024-10-22 18:06:37.165  [Pipeline] stage
-2024-10-22 18:06:37.192  [Pipeline] { (Create AWS-RDS-Restart Folder)
-2024-10-22 18:06:37.304  [Pipeline] script
-2024-10-22 18:06:37.335  [Pipeline] {
-2024-10-22 18:06:37.445  [Pipeline] jobDsl
-2024-10-22 18:06:37.502  Processing provided DSL script
-2024-10-22 18:06:37.935  Existing items:
-2024-10-22 18:06:37.935      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart'}
-2024-10-22 18:06:37.935  Unreferenced items:
-2024-10-22 18:06:37.935      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2001-restart-schedule'}
-2024-10-22 18:06:37.935      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2002-restart-schedule'}
-2024-10-22 18:06:37.935      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2003-restart-schedule'}
-2024-10-22 18:06:37.935      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2004-restart-schedule'}
-2024-10-22 18:06:38.015  [Pipeline] echo
-2024-10-22 18:06:38.044  Job folder 'GHSSelfServicePlatform/AWS-RDS-Restart' created or already exists.
-2024-10-22 18:06:38.070  [Pipeline] }
-2024-10-22 18:06:38.187  [Pipeline] // script
-2024-10-22 18:06:38.243  [Pipeline] }
-2024-10-22 18:06:38.355  [Pipeline] // stage
-2024-10-22 18:06:38.462  [Pipeline] stage
-2024-10-22 18:06:38.489  [Pipeline] { (Create Jobs in AWS-RDS-Restart Folder)
-2024-10-22 18:06:38.601  [Pipeline] script
-2024-10-22 18:06:38.627  [Pipeline] {
-2024-10-22 18:06:38.741  [Pipeline] echo
-2024-10-22 18:06:38.794  Processing User_Inputs/RestartRDS/dbiusameacd2001.yml...
-2024-10-22 18:06:38.847  [Pipeline] readYaml
-2024-10-22 18:06:38.986  [Pipeline] echo
-2024-10-22 18:06:39.014  Creating job for DB: dbiusameacd2001, Region: us-east-1, Schedule: H 10 15 * *
-2024-10-22 18:06:39.067  [Pipeline] step
-2024-10-22 18:06:39.097  Processing provided DSL script
-2024-10-22 18:06:39.496  Warning: (script, line 3) triggers is deprecated
-2024-10-22 18:06:39.620  Existing items:
-2024-10-22 18:06:39.620      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart'}
-2024-10-22 18:06:39.620      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2001-restart-schedule'}
-2024-10-22 18:06:39.620  Unreferenced items:
-2024-10-22 18:06:39.620      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2002-restart-schedule'}
-2024-10-22 18:06:39.620      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2003-restart-schedule'}
-2024-10-22 18:06:39.620      GeneratedJob{name='GHSSelfServicePlatform/AWS-RDS-Restart/dbiusameacd2004-restart-schedule'}
-2024-10-22 18:06:39.901  [Pipeline] }
-2024-10-22 18:06:40.041  [Pipeline] // script
-2024-10-22 18:06:40.151  [Pipeline] }
-2024-10-22 18:06:40.291  [Pipeline] // stage
-2024-10-22 18:06:40.427  [Pipeline] stage
-2024-10-22 18:06:40.453  [Pipeline] { (Delete Jobs if YAML Removed)
-2024-10-22 18:06:40.511  Stage "Delete Jobs if YAML Removed" skipped due to earlier failure(s)
-2024-10-22 18:06:40.562  [Pipeline] getContext
-2024-10-22 18:06:40.665  [Pipeline] }
-2024-10-22 18:06:40.808  [Pipeline] // stage
-2024-10-22 18:06:40.890  [Pipeline] }
-2024-10-22 18:06:41.033  [Pipeline] // withEnv
-2024-10-22 18:06:41.116  [Pipeline] }
-2024-10-22 18:06:41.255  [Pipeline] // withCredentials
-2024-10-22 18:06:41.339  [Pipeline] }
-2024-10-22 18:06:41.478  [Pipeline] // withEnv
-2024-10-22 18:06:41.582  [Pipeline] }
-2024-10-22 18:06:41.739  [Pipeline] // node
-2024-10-22 18:06:41.900  [Pipeline] End of Pipeline
-2024-10-22 18:06:42.316  Also:   org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: adc1146a-ff7e-4efc-8b15-46609acec905
-2024-10-22 18:06:42.316  java.lang.NoSuchMethodError: No such DSL method 'sandbox' found among steps [ansiColor, ansibleAdhoc, ansiblePlaybook, ansibleTower, ansibleTowerProjectRevision, ansibleTowerProjectSync, ansibleVault, archive, bat, build, catchError, checkout, compareVersions, datadog, deleteDir, dir, dockerFingerprintFrom, dockerFingerprintRun, dockerNode, echo, emailext, emailextrecipients, envVarsForTool, error, fileExists, findBuildScans, findFiles, getContext, git, githubNotify, httpRequest, input, isUnix, jiraComment, jiraIssueSelector, jiraSearch, junit, library, libraryResource, load, lock, mail, milestone, node, nodesByLabel, office365ConnectorSend, parallel, powershell, prependToFile, properties, publishChecks, publishHTML, pwd, pwsh, readCSV, readFile, readJSON, readManifest, readMavenPom, readProperties, readTrusted, readYaml, resolveScm, retry, script, sh, sha1, sha256, sleep, sshagent, stage, stash, step, svn, tar, tee, timeout, timestamps, tm, tool, touch, unarchive, unstable, unstash, untar, unzip, validateDeclarativePipeline, verifySha1, verifySha256, waitForBuild, waitForQualityGate, waitUntil, warnError, withChecks, withContext, withCredentials, withDockerContainer, withDockerRegistry, withDockerServer, withEnv, withGradle, withGroovy, wrap, writeCSV, writeFile, writeJSON, writeMavenPom, writeYaml, ws, zip] or symbols [GenericTrigger, GitUsernamePassword, agent, all, allBranchesSame, allOf, always, ansible, ant, antFromApache, antOutcome, antTarget, any, anyOf, apiToken, apiTokenProperty, architecture, archiveArtifacts, artifactManager, assembla, attach, authorInChangelog, authorizationMatrix, authorizationMatrixFork, aws, azureAdAuthorizationMatrix, batchFile, bayesianScanner, bitbucket, bitbucketBranchDiscovery, bitbucketBuildStatusNotifications, bitbucketForkDiscovery, bitbucketPublicRepoPullRequestFilter, bitbucketPullRequestDiscovery, bitbucketServer, bitbucketSshCheckout, bitbucketTagDiscovery, bitbucketTrustEveryone, bitbucketTrustNobody, bitbucketTrustProject, bitbucketTrustTeam, bitbucketWebhookConfiguration, bitbucketWebhookRegistration, booleanParam, branch, brokenBuildSuspects, brokenTestsSuspects, browser, buildButton, buildDiscarder, buildDiscarders, buildRetention, buildSingleRevisionOnly, buildUser, buildUserVars, buildingTag, builtInNode, caseInsensitive, caseSensitive, certificate, cgit, changeRequest, changelog, changelogBase, changelogToBranch, changeset, checkoutOption, checkoutToSubdirectory, choice, choiceParam, cleanAfterCheckout, cleanBeforeCheckout, cleanWs, clock, cloneOption, command, consoleUrlProvider, contentRepository, contributor, credentials, cron, crumb, culprits, default, defaultDisplayUrlProvider, defaultFolderConfiguration, defaultView, demand, developers, disableConcurrentBuilds, disableRestartFromStage, disableResume, discoverOtherRefs, discoverOtherRefsTrait, diskSpace, diskSpaceMonitor, docker, dockerCert, dockerContainer, dockerServer, dockerTool, dockerfile, downstream, dumb, durabilityHint, email-ext, envInject, envVars, envVarsFilter, environment, equals, experimentalFlags, expression, extendedChoice, extendedEmailPublisher, file, fileParam, filePath, fingerprint, fingerprints, fisheye, frameOptions, freeStyle, freeStyleJob, fromDocker, fromScm, fromSource, git, gitBranchDiscovery, gitHooks, gitHubBranchDiscovery, gitHubBranchHeadAuthority, gitHubExcludeArchivedRepositories, gitHubExcludeForkedRepositories, gitHubExcludePrivateRepositories, gitHubExcludePublicRepositories, gitHubForkDiscovery, gitHubIgnoreDraftPullRequestFilter, gitHubPullRequestDiscovery, gitHubSshCheckout, gitHubTagDiscovery, gitHubTopicsFilter, gitHubTrustContributors, gitHubTrustEveryone, gitHubTrustNobody, gitHubTrustPermissions, gitLab, gitList, gitParameter, gitSCM, gitTagDiscovery, gitTool, gitUsernamePassword, gitWeb, gitblit, github, githubAccessToken, githubProjectProperty, githubPush, gitiles, gogs, gradle, groovy, group, headRegexFilter, headWildcardFilter, http, hyperlink, hyperlinkToModels, ignoreOnPush, inbound, inheriting, inheritingGlobal, installSource, isRestartedRun, issueCommentTrigger, javadoc, jdk, jdkInstaller, jgit, jgitapache, jnlp, jobBuildDiscarder, jobDsl, jobName, junitResults, junitTestResultStorage, kiln, label, labelAddedTrigger, lastDuration, lastFailure, lastGrantedAuthorities, lastStable, lastSuccess, legacy, legacySCM, lfs, list, local, localBranch, localBranchTrait, location, logRotator, loggedInUsersCanDoAnything, mailer, masterBuild, maven, maven3Mojos, mavenErrors, mavenFlow, mavenGlobalConfig, mavenMojos, mavenRelease, mavenWarnings, modernSCM, multiBranchProjectDisplayNaming, multibranch, myView, namedBranchesDifferent, newContainerPerStage, nexus, node, nodeProperties, nonInheriting, none, nonresumable, not, office365ConnectorSend, office365ConnectorWebhooks, organizationFolder, overrideIndexTriggers, paneStatus, parallelsAlwaysFailFast, parameters, password, pattern, perBuildTag, permanent, phabricator, pipeline, pipeline-model, pipeline-model-docker, pipelineTriggers, plainText, plugin, pollSCM, preserveStashes, previous, projectNamingStrategy, promoteArtifacts, promoteImages, proxy, pruneStaleBranch, pruneStaleTag, pruneTags, pullRequestReview, queueItemAuthenticator, quietPeriod, rateLimit, rateLimitBuilds, recipients, redmine, refSpecs, releaseProject, remoteName, requestor, resourceRoot, responseTime, retainOnlyVariables, rhodeCode, run, runParam, sSHLauncher, schedule, scmGit, scmRetryCount, script, scriptApproval, scriptApprovalLink, search, security, shell, simpleBuildDiscarder, skipDefaultCheckout, skipStagesAfterUnstable, slave, sonarQubeScanner, sourceRegexFilter, sourceWildcardFilter, sparseCheckoutPaths, ssh, sshPublicKey, sshUserPrivateKey, stageExtraImages, stageProject, standard, status, string, stringParam, submodule, submoduleOption, suppressAutomaticTriggering, suppressFolderAutomaticTriggering, svnPhabricator, swapSpace, tag, tagImages, teamFoundation, teamSlugFilter, text, textParam, timestamper, timestamperConfig, timezone, tmpSpace, toolLocation, triggeredBy, unsecured, untrusted, upstream, upstreamDevelopers, url, user, userIdentity, userOrGroup, userSeed, usernameColonPassword, usernamePassword, viewgit, viewsTabBar, waitUntilArtifactSynced, waitUntilJenkinsPluginSynced, waitUntilPullRequestMerged, weather, withAnt, withSonarQubeEnv, x509ClientCert, zip] or globals [btc, currentBuild, docker, env, jxCommands, mavenFlow, params, pipeline, promoteArtifacts, promoteImages, releaseProject, scm, stageProject, tagImages, waitUntilArtifactSyncedWithCentral, waitUntilJenkinsPluginSynced, waitUntilPullRequestMerged]
-2024-10-22 18:06:42.316  	at org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:219)
-2024-10-22 18:06:42.317  	at org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:124)
-2024-10-22 18:06:42.317  	at jdk.internal.reflect.GeneratedMethodAccessor385.invoke(Unknown Source)
-2024-10-22 18:06:42.317  	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-2024-10-22 18:06:42.317  	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-2024-10-22 18:06:42.317  	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
-2024-10-22 18:06:42.317  	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
-2024-10-22 18:06:42.317  	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1225)
-2024-10-22 18:06:42.317  	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
-2024-10-22 18:06:42.317  	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)
-2024-10-22 18:06:42.317  	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-2024-10-22 18:06:42.317  	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-2024-10-22 18:06:42.317  	at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:180)
-2024-10-22 18:06:42.317  	at org.kohsuke.groovy.sandbox.GroovyInterceptor.onMethodCall(GroovyInterceptor.java:23)
-2024-10-22 18:06:42.317  	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:163)
-2024-10-22 18:06:42.317  	at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:178)
-2024-10-22 18:06:42.317  	at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:182)
-2024-10-22 18:06:42.317  	at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
-2024-10-22 18:06:42.317  	at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
-2024-10-22 18:06:42.317  	at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
-2024-10-22 18:06:42.317  	at com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:17)
-2024-10-22 18:06:42.317  	at org.jenkinsci.plugins.workflow.cps.LoggingInvoker.methodCall(LoggingInvoker.java:105)
-2024-10-22 18:06:42.317  	at WorkflowScript.run(WorkflowScript:94)
-2024-10-22 18:06:42.317  	at com.cloudbees.groovy.cps.CpsDefaultGroovyMethods.each(CpsDefaultGroovyMethods:2125)
-2024-10-22 18:06:42.317  	at com.cloudbees.groovy.cps.CpsDefaultGroovyMethods.each(CpsDefaultGroovyMethods:1980)
-2024-10-22 18:06:42.317  	at WorkflowScript.run(WorkflowScript:53)
-2024-10-22 18:06:42.317  	at ___cps.transform___(Native Method)
-2024-10-22 18:06:42.317  	at com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:90)
-2024-10-22 18:06:42.318  	at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:116)
-2024-10-22 18:06:42.318  	at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixName(FunctionCallBlock.java:80)
-2024-10-22 18:06:42.318  	at jdk.internal.reflect.GeneratedMethodAccessor296.invoke(Unknown Source)
-2024-10-22 18:06:42.318  	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-2024-10-22 18:06:42.318  	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-2024-10-22 18:06:42.318  	at com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
-2024-10-22 18:06:42.318  	at com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
-2024-10-22 18:06:42.318  	at com.cloudbees.groovy.cps.Next.step(Next.java:83)
-2024-10-22 18:06:42.318  	at com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:147)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:17)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:49)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:180)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:423)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:331)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:295)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$wrap$4(CpsVmExecutorService.java:136)
-2024-10-22 18:06:42.318  	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-2024-10-22 18:06:42.318  	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)
-2024-10-22 18:06:42.318  	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
-2024-10-22 18:06:42.318  	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:68)
-2024-10-22 18:06:42.318  	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
-2024-10-22 18:06:42.318  	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-2024-10-22 18:06:42.318  	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-2024-10-22 18:06:42.318  	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-2024-10-22 18:06:42.318  	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:53)
-2024-10-22 18:06:42.318  	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:50)
-2024-10-22 18:06:42.319  	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)
-2024-10-22 18:06:42.319  	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)
-2024-10-22 18:06:42.319  	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$categoryThreadFactory$0(CpsVmExecutorService.java:50)
-2024-10-22 18:06:42.319  	at java.base/java.lang.Thread.run(Unknown Source)
-2024-10-22 18:06:42.402  Finished: FAILURE
+pipeline {
+    agent { label 'docker-build-aws' }
+
+    environment {
+        JOB_PARENT_FOLDER = 'GHSSelfServicePlatform'  // The parent folder where 'AWS-RDS-Restart' will be created
+        JOB_FOLDER = 'AWS-RDS-Restart'  // Folder to be created inside GHSSelfServicePlatform
+        JOB_TRACKING_FILE = 'created_jobs.log'
+        YAML_INPUT_PATH = 'Platform-SelfService/User_Inputs/RestartRDS'
+        JENKINS_TOKEN = credentials("pavani_jenkins_api_token")
+        PLAYBOOK_PATH = 'rds-restart.yml'  // Path to the playbook in the same repository
+    }
+
+    stages {
+        // List YAML files after the repository checkout via SCM in the job configuration
+        stage('List YAML Files from SCM') {
+            steps {
+                echo 'Listing YAML files from the checked-out repository...'
+                script {
+                    def yamlFiles = findFiles(glob: '**/*.yml')  // Find all YAML files in the workspace
+                    if (yamlFiles.length == 0) {
+                        error("No YAML files found to process.")
+                    } else {
+                        echo "YAML files found: ${yamlFiles.collect { it.path }}"  // Collect file paths from FileWrapper objects
+                        env.YAML_FILES = yamlFiles.collect { it.path }.join(',')
+                    }
+                }
+            }
+        }
+
+        // Create the parent folder (GHSSelfServicePlatform) and the AWS-RDS-Restart folder inside it
+        stage('Create AWS-RDS-Restart Folder') {
+            steps {
+                script {
+                    // Create the 'AWS-RDS-Restart' folder under 'GHSSelfServicePlatform'
+                    jobDsl scriptText: """
+                    folder('${JOB_PARENT_FOLDER}/${JOB_FOLDER}') {
+                        displayName('AWS RDS Restart Jobs')
+                        description('Folder for RDS restart jobs')
+                    }
+                    """
+                    echo "Job folder '${JOB_PARENT_FOLDER}/${JOB_FOLDER}' created or already exists."
+                }
+            }
+        }
+
+        // Create the jobs inside AWS-RDS-Restart folder with Poll SCM schedule
+        stage('Create Jobs in AWS-RDS-Restart Folder') {
+            steps {
+                script {
+                    def yamlFiles = env.YAML_FILES.split(',')
+                    def jobNamesCreated = []
+
+                    yamlFiles.each { yamlFile ->
+                        echo "Processing ${yamlFile}..."
+                        def yamlContent = readYaml file: "${yamlFile}"
+
+                        def db_name = yamlContent.db_name
+                        def region = yamlContent.region
+                        def schedule = yamlContent.schedule  // Using this schedule for cron trigger
+
+                        if (!db_name || !region || !schedule) {
+                            echo "Skipping ${yamlFile} due to missing required fields (db_name, region, schedule)."
+                        } else {
+                            echo "Creating job for DB: ${db_name}, Region: ${region}, Schedule: ${schedule}"
+
+                            // Create or update the Jenkins job using Job DSL with cron trigger
+                            jobDsl scriptText: """
+                            pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${db_name}-restart-schedule') {
+                                description('Job to restart RDS DB: ${db_name} in region: ${region}')
+                                triggers {
+                                    cron('${schedule}')  // Cron schedule from YAML
+                                }
+                                definition {
+                                    cps {
+                                        script('''
+                                            pipeline {
+                                                agent any
+                                                stages {
+                                                    stage('Restart RDS DB') {
+                                                        steps {
+                                                            echo "Restarting RDS DB: ${db_name} in region: ${region}"
+
+                                                            // Trigger Ansible playbook
+                                                            sh "ansible-playbook ${WORKSPACE}/${PLAYBOOK_PATH} -e db_name=${db_name} -e region=${region}"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ''')
+                                    }
+                                }
+                            }
+                            """
+                        }
+                    }
+
+                    writeFile file: "${JOB_TRACKING_FILE}", text: jobNamesCreated.join('\n')  // Store created jobs in file
+                    env.CREATED_JOBS = jobNamesCreated.join(',')
+                }
+            }
+        }
+
+        // Delete jobs if their corresponding YAML files are removed
+        stage('Delete Jobs if YAML Removed') {
+            steps {
+                script {
+                    def createdJobs = env.CREATED_JOBS.split(',')  // Get jobs created in this run
+
+                    // List the jobs tracked from the last run
+                    def previousJobs = readFile("${JOB_TRACKING_FILE}").split('\n').findAll { it }
+
+                    echo "Previous jobs: ${previousJobs}"
+                    echo "Created jobs in this run: ${createdJobs}"
+
+                    // Jobs to delete are those in the previous list but not in the current run
+                    def jobsToDelete = previousJobs - createdJobs
+
+                    jobsToDelete.each { jobName ->
+                        echo "Deleting job: ${jobName} as it no longer exists in YAML files."
+                        jobDsl removedJobAction: 'DELETE', scriptText: """
+                            pipelineJob('${JOB_PARENT_FOLDER}/${JOB_FOLDER}/${jobName}') {
+                                // This job will be deleted
+                            }
+                        """
+                    }
+                }
+            }
+        }
+    }
+}
